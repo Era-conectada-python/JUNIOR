@@ -1,0 +1,10 @@
+comandos git
+git status
+git clone endereço do arquivo
+git config --global user.name "nome"
+git config --global user.email "emal@gmail.com"	
+git pull resgatar atualizaçoes
+git add nome do arquivo
+git add . localiza todos os arquivos que foram modificados.
+git commit -m "mensagem"
+git push
