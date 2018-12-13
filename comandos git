@@ -14,3 +14,5 @@ git branch saber as branch que tem na master
 git checkout -b aula11 master criar um novo
 git branch -D aula11 remover a branch
 git checkout master mudar a branch
+git push -u 
+git log -5
