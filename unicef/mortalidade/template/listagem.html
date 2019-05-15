@@ -1,0 +1,113 @@
+<html>
+	<head>
+		<style>
+			body{
+				height: 1000px;
+				background-color: #66CDAA;
+			}
+			.mortalidade{
+				overflow: auto;
+				margin-left: 0px;
+				margin-right: 0px;
+				padding: 10px;
+				background-color: #666;
+				width:90%;
+				height: 600px;
+				margin: 10px;
+			}
+			.mortalidade table{
+
+				width: 80%;
+				margin:0 auto;
+			}
+			.mortalidade td{
+				text-align: center;
+				background-color: #DCDCDC
+			}
+			.mortalidade h2{
+				color:#fff;
+				
+			}
+
+			#colunas td{
+				background-color: gray
+			}
+			.pesquisar{
+				margin-left: 130px
+			}
+			.pesquisar b{
+				color: whitesmoke;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<!-- <div>
+			{% for country in countries %}
+			    <table>
+			    	<tr>
+			    		<td>
+			        		{{ country.iso_code }}
+			        	</td>
+			        	<td>
+			        		{{country.country_name }}
+			        	</td>
+			        </tr>
+			      
+			    </table>
+			{% endfor %}
+		</div> -->
+
+		<div class="mortalidade">
+			<div class="pesquisar">
+				<form method="POST">
+					<b>Pesquisar:</b> <input type="text" name="pesquisar"/>
+				</form>
+			</div>
+			<table border="0">
+				<tr id="colunas">
+					<td> <h2> País</h2></td>
+					<td> <h2> Ano</h2></td>
+					<td> <h2> Media</h2></td>
+				</tr>
+
+					{% for mortality in mortalities %}
+					    
+					    	<tr>
+					    		<td>
+					        		{{ mortality.country }}
+					        	</td>
+					    		<td>
+					        		{{ mortality.year }}
+					        	</td>
+					        	<td>
+					        		{{mortality.median }}
+					        	</td>
+					        </tr>
+					      
+					    
+					{% endfor %}
+			</table>
+		</div>
+			
+
+		<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+		
+		<script type="text/javascript">type="text/javascript" sr­c="autocomplete-master/jquery.autocomplete.js"></script>
+
+		<!-- <script type="text/javascript">
+			var mortalities = '{{mortalities}}';
+			var countries = '{{countries}}';
+			
+			$(function() {
+				  $("input").autocomplete({
+				    source:[countries]
+				  }); 
+				});
+		</script> -->
+
+	</body>
+
+	
+</html>
